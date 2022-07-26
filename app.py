@@ -9,7 +9,7 @@ import pandas as pd
 from datetime import datetime
 
 # Load the LogisticRegression model
-model = pickle.load(open('metro_intestate23.pkl', 'rb'))
+model = pickle.load(open('metro.pkl', 'rb'))
 
 app = Flask(__name__)
 
