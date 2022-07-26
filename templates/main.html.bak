@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metro Interstate Traffic volume Predictor</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Website Title -->
+
+  <div class="container">
+    <h2 class='container-heading'><span class="heading_font">Metro Interstate Traffic volume Prediction</span></h2>
+    <div class='description'>
+      <p>A Machine Learning Web Application that predicits Traffic volume on given condition, Built with Flask and Deployed using Heroku.</p><br>
+        <p>(Note:This Application is 96% accurate)</p>
+    </div>
+  </div>	
+
+  <!-- Text Area -->
+  <div class="ml-container">
+    <form action="{{ url_for('predict')}}" method="POST"> 
+
+      
+
+		
+		<label for="a">Rain</label>
+        <input type="text" id="a" name="a" placeholder="-- Enter Numeric Amount in mm of rain that occurred in the hour --"><br>
+		
+	
+
+
+        <label for="b">Snow</label>
+        <input type="text" id="b" name="b" placeholder="-- Enter Numeric Amount in mm of snow that occurred in the hour --"><br>
+		
+		<label for="c">Cloud Cover</label>
+        <input type="text" id="c" name="c" placeholder="-- Enter  Numeric Percentage of cloud cover --"><br>
+		
+		<label for="h">Temperature</label>
+        <input type="text" id="h" name="h" placeholder="-- Enter Numeric Average temp in kelvin --"><br>
+		
+		
+        <label for="d">Weather</label>
+        <select id="d" name="d">
+          <option selected>----select Categorical Short textual description of the current weather----</option>
+          <option value="15164">Clouds</option>
+          <option value="13391">Clear</option>
+		  <option value="5950">Mist</option>
+          <option value="5672">Rain</option>
+		  <option value="2876">Snow</option>
+          <option value="1821">Drizzle</option>
+		  <option value="1360">Haze</option>
+          <option value="1034">Thunderstorm</option>
+		  <option value="912">Fog</option>
+          <option value="20">Smoke</option>
+		  <option value="4">Squall</option>
+        </select><br>
+	
+		
+         <label for="e">Weather Description</label>
+        <select id="e" name="e">
+          <option selected>----select weather description that are commonly used----</option>
+          <option value="11665">sky is clear</option>
+          <option value="5950">mist</option>
+		  <option value="5081">overcast clouds</option>
+          <option value="4666">broken clouds</option>
+		  <option value="3461">scattered clouds</option>
+          <option value="3372">light rain</option>
+		  <option value="1956">few clouds</option>
+          <option value="1946">light snow</option>
+		  <option value="11665">Sky is Clear</option>
+          <option value="1664">moderate rain</option>
+		  <option value="1360">haze</option>
+          <option value="1100">light intensity drizzle</option>
+          <option value="912">fog</option>
+		  <option value="673">proximity thunderstorm</option>
+          <option value="651">drizzle</option>
+		  <option value="616">heavy snow</option>
+          <option value="467">heavy intensity rain</option>
+		  <option value="293">snow</option>
+          <option value="136">proximity shower rain</option>
+		  <option value="125">thunderstorm</option>
+          <option value="64">heavy intensity drizzle</option>
+		  <option value="63">thunderstorm with heavy rain</option>
+		  <option value="54">thunderstorm with light rain</option>
+          <option value="52">proximity thunderstorm with rain</option>
+		  <option value="37">thunderstorm with rain</option>
+          <option value="20">smoke</option>
+		  <option value="18">very heavy rain</option>
+          <option value="15">thunderstorm with light drizzle</option>
+		  <option value="13">light intensity shower rain</option>
+          <option value="12">proximity thunderstorm with drizzle</option>
+		  <option value="11">light shower snow</option>
+          <option value="6">light rain and snow</option>
+		  <option value="5">shower drizzle</option>
+          <option value="4">SQUALLS</option>
+          <option value="3">sleet</option>
+		  <option value="7">thunderstorm with drizzle</option>
+          <option value="2">freezing rain</option>
+		  <option value="1">shower snow</option>
+        </select><br>
+	
+     
+	    <label for="f">Holiday</label>
+        <select id="f" name="f">
+          <option selected>----select holdiay----</option>
+          <option value="1">State Fair</option>
+          <option value="2">Labor Day</option>
+		  <option value="3">Thanksgiving Day</option>
+          <option value="4">Christmas Day</option>
+		  <option value="5">New Years Day</option>
+          <option value="6">Martin Luther King Jr Day</option>
+		  <option value="7">Columbus Day</option>
+          <option value="8">Veterans Day</option>
+		  <option value="9">Washingtons Birthday</option>
+          <option value="10">Memorial Day</option>
+		  <option value="11">Independence Day</option>
+		  <option value="12">None</option>
+        </select><br>
+
+        
+		<label for="j">Date </label>
+		<input type ="datetime-local"  id="j" name="j"   ><br><br>
+
+	
+    
+
+      <input type="submit" class="my-cta-button" value="Predict">
+    </form>
+  </div>
+
+  <!-- Footer -->
+ <div class='footer'>
+    <div class="contact">
+      <a target="_blank" href="https://github.com"><i
+          class="fab fa-github fa-lg contact-icon"></i></a>
+      <a target="_blank" href="https://www.linkedin.com"><i
+          class="fab fa-linkedin fa-lg contact-icon"></i></a>
+    </div>
+    <p class='footer-description'>Made by Saravana Ganesh.</p>
+  </div>
+
+</body>
+
+</html>
