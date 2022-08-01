@@ -18,7 +18,7 @@ on complete end-to-end machine learning project.
 
 To View the Deployed Application, click on the link given below : Metro Interstate Traffic Volume Predictor Web App - https://metrointerstatepredictor22.herokuapp.com/
 
-![](metro_interstate_gif.gif)
+![](ezgif-3-53aef99fa6.gif)
 
 # Technical Aspect
 This Project is mainly divided into two parts:
